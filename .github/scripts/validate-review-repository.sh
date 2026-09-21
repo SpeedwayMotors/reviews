@@ -10,12 +10,12 @@ fail() {
 
 [[ ! -e index.html ]] || fail "the repository root must not contain index.html"
 
-allowed_categories=(configurators toppers calculators)
+allowed_categories=(configurators toppers calculators landing-pages)
 existing_categories=()
 
 while IFS= read -r -d '' top_level_directory; do
   case "$top_level_directory" in
-    ./.git|./.github|./configurators|./toppers|./calculators) ;;
+    ./.git|./.github|./configurators|./toppers|./calculators|./landing-pages) ;;
     *) fail "unexpected top-level directory ${top_level_directory#./}" ;;
   esac
 done < <(find . -mindepth 1 -maxdepth 1 -type d -print0)
@@ -51,10 +51,10 @@ if [[ -n "$before_sha" && -n "$after_sha" && "$before_sha" != "$zero_sha" ]] &&
       index.html)
         fail "the public root landing page may not be created"
         ;;
-      configurators/index.html|toppers/index.html|calculators/index.html)
+      configurators/index.html|toppers/index.html|calculators/index.html|landing-pages/index.html)
         fail "category landing pages may not be created"
         ;;
-      configurators/*/*|toppers/*/*|calculators/*/*)
+      configurators/*/*|toppers/*/*|calculators/*/*|landing-pages/*/*)
         IFS=/ read -r category project _ <<< "$changed_path"
         current_scope="$category/$project"
         if [[ -n "$project_scope" && "$project_scope" != "$current_scope" ]]; then
