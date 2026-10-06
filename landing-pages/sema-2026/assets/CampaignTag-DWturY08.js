@@ -1,0 +1,1 @@
+import{j as a}from"./index-CEam0Orw.js";const r={hero:"eyebrow",gallery:"badge",feature:"feature-card-label"};function n({children:e,placement:t,tone:s="purple"}){return a.jsx("span",{className:`spotlight-tag ${r[t]}`,"data-tone":s,children:a.jsx("span",{className:"campaign-tag-label",children:e})})}export{n as C};
