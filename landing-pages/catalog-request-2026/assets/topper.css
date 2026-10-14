@@ -68,7 +68,7 @@
 /* Three explicit modes. Shared copy spacing above applies to every mode. */
 @container catalog-topper (width > 850px) {
   /* Desktop reference composition; artwork does not control the copy's spacing. */
-  .catalog-topper__layout {position: relative;min-height: min(31.56cqw,505px);}
+  .catalog-topper__layout {position: relative;min-height: min(31.56cqw,505px);padding-top: clamp(48px,3.5cqw,56px);}
   .catalog-topper__copy {align-self: start;}
   .catalog-topper__description {max-width: 96%;}
   .catalog-topper h2 {font-size: clamp(13px,1.45cqw,22px);}
@@ -104,7 +104,7 @@
 }
 /* Animate the image only, preserving each mode's artwork box and final crop. */
 @keyframes catalog-topper-enter {
-  from {opacity: 0;transform: translateX(24px);}
+  from {opacity: 0;transform: translateX(40px);}
   to {opacity: 1;transform: translateX(0);}
 }
 @media (prefers-reduced-motion: no-preference) {
