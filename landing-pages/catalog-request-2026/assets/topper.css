@@ -13,6 +13,7 @@
 .catalog-topper *, .catalog-topper *::before, .catalog-topper *::after {box-sizing: border-box;}
 .catalog-topper__surface {
   position: relative;
+  overflow-x: clip;
   border-top: 5px solid var(--catalog-yellow);
   background: #151515;
   background-image: linear-gradient(90deg, rgba(0,0,0,.65), rgba(0,0,0,.12)), var(--catalog-asphalt);
@@ -103,10 +104,10 @@
 }
 /* Animate the image only, preserving each mode's artwork box and final crop. */
 @keyframes catalog-topper-enter {
-  from {opacity: 0;transform: translateY(18px);}
-  to {opacity: 1;transform: translateY(0);}
+  from {opacity: 0;transform: translateX(40px);}
+  to {opacity: 1;transform: translateX(0);}
 }
 @media (prefers-reduced-motion: no-preference) {
-  .catalog-topper__artwork img {animation: catalog-topper-enter 750ms cubic-bezier(.22,1,.36,1) both;}
+  .catalog-topper__artwork img {animation: catalog-topper-enter 1100ms cubic-bezier(.16,1,.3,1) 120ms both;}
 }
 @media (prefers-reduced-motion: reduce) {.catalog-topper__chevron,.catalog-topper__editions a {transition: none;}}
