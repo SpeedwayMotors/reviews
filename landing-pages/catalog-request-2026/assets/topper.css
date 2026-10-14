@@ -101,4 +101,12 @@
   .catalog-topper h2 {font-size: clamp(20px,5.38cqw,21px);}
   .catalog-topper__international {font-size: clamp(13px,3.59cqw,14px);}
 }
+/* Animate the image only, preserving each mode's artwork box and final crop. */
+@keyframes catalog-topper-enter {
+  from {opacity: 0;transform: translateY(18px);}
+  to {opacity: 1;transform: translateY(0);}
+}
+@media (prefers-reduced-motion: no-preference) {
+  .catalog-topper__artwork img {animation: catalog-topper-enter 750ms cubic-bezier(.22,1,.36,1) both;}
+}
 @media (prefers-reduced-motion: reduce) {.catalog-topper__chevron,.catalog-topper__editions a {transition: none;}}
