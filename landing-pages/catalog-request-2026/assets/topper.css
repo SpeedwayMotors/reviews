@@ -45,7 +45,7 @@
 .catalog-topper__international a:hover {text-decoration: underline;text-underline-offset: 3px;}
 .catalog-topper__artwork {min-width: 0;}
 .catalog-topper__artwork img {display: block;width: 100%;height: auto;filter: drop-shadow(0 16px 22px #0008);}
-.catalog-topper__digital {position: absolute;top: -1px;right: 0;z-index: 2;max-width: 100%;}
+.catalog-topper__digital {position: absolute;top: -1px;right: 0;z-index: 1;max-width: 100%;}
 .catalog-topper__toggle {display: flex;align-items: center;justify-content: center;gap: 18px;min-height: 52px;border: 0;background: var(--catalog-yellow);color: #191919;padding: 14px 28px 14px 34px;font: 700 15px/1.4 Arial,Helvetica,sans-serif;cursor: pointer;position: relative;}
 .catalog-topper__toggle::before {content: '';position: absolute;left: -17px;top: 0;width: 18px;height: 100%;background: var(--catalog-yellow);clip-path: polygon(0 0,100% 0,100% 100%,85% 100%);}
 .catalog-topper__toggle:hover {background: #ffdc53;}
