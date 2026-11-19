@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <filter id="floorplan" color-interpolation-filters="sRGB">
+    <feColorMatrix type="matrix" values="-1.63 .95 1.63 0 .01  -1.63 .95 1.63 0 .01  -1.63 .95 1.63 0 .01  0 0 0 1 0"/>
+    <feComponentTransfer>
+      <feFuncR type="table" tableValues="0 .2 .4 .6 .89 .96"/>
+      <feFuncG type="table" tableValues="0 .2 .4 .6 .89 .96"/>
+      <feFuncB type="table" tableValues="0 .2 .4 .6 .89 .96"/>
+    </feComponentTransfer>
+  </filter>
+</svg>
